@@ -16,9 +16,8 @@ const SavedBooks = () => {
 
   // use this to determine if `useEffect()` hook needs to run again
   const userDataLength = Object.keys(userData).length;
- useQuery(() => {
-  const 
- })
+ const { loading, data } = useQuery(GET_ME, {
+  variables: {tech: _id, name}})
   // useEffect(() => {
   //   const getUserData = async () => {
   //     try {
